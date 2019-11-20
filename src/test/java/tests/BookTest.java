@@ -11,7 +11,7 @@ public class BookTest extends BaseTest
 
 		tutorialPage.skipTutorial();
 
-		loginPage.login("", "");
+		loginPage.login("01092548176", "Youssef");
 		
 		searchPage.beginSearch();
 		
