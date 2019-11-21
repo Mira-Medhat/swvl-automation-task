@@ -25,10 +25,11 @@ public class SearchPage {
 	@FindBy (id = "add_quick_destination_icon")
 	public MobileElement addQuickAddressBtn;
 
-public void beginSearch() {
+public BookPage beginSearch() {
 		
 		if (driver.findElements(By.id("got_it_tv")).size() != 0) {
 			gotItBtn.click();
 		}
+		return new BookPage(driver);
 }
 }

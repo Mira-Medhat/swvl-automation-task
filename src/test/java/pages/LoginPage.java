@@ -41,7 +41,7 @@ public class LoginPage {
 	@FindBy (id = "password_edit_text")
 	public MobileElement passwordInput;
 	
-	public void login(String mobileNumber, String password) {
+	public SearchPage login(String mobileNumber, String password) {
 
 		List<MobileElement> countrylist = new ArrayList<MobileElement>();
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
@@ -61,5 +61,7 @@ public class LoginPage {
 		nextButton.click();
 		passwordInput.sendKeys(password);
 		nextButton.click();
+		
+		return new SearchPage(driver);
 	}
 }
