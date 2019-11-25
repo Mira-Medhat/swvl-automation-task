@@ -6,16 +6,20 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class BookPage {
 
 	public AppiumDriver driver;
 	public BookPage(AppiumDriver driver) {
 		this.driver=driver;
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+
 	}
 
 	@FindBy(id = "pickup_et")

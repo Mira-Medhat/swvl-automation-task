@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57765" started-at="2019-11-21T18:11:06Z" finished-at="2019-11-21T18:12:04Z">
+  <suite name="Default suite" duration-ms="46869" started-at="2019-11-25T20:08:52Z" finished-at="2019-11-25T20:09:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57765" started-at="2019-11-21T18:11:06Z" finished-at="2019-11-21T18:12:04Z">
+    <test name="Default test" duration-ms="46869" started-at="2019-11-25T20:08:52Z" finished-at="2019-11-25T20:09:39Z">
       <class name="tests.BookTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.BookTest@32eebfca]" name="setUp" is-config="true" duration-ms="45094" started-at="2019-11-21T18:11:06Z" finished-at="2019-11-21T18:11:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="bookTest()[pri:0, instance:tests.BookTest@32eebfca]" name="bookTest" duration-ms="10580" started-at="2019-11-21T18:11:51Z" finished-at="2019-11-21T18:12:02Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:tests.BookTest@3c947bc5]" name="setUp" is-config="true" duration-ms="46785" started-at="2019-11-25T20:08:52Z" finished-at="2019-11-25T20:09:39Z">
+          <exception class="org.openqa.selenium.NoAlertPresentException">
+            <message>
+              <![CDATA[No alert is present on the screen (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Medhat-PC', ip: '192.168.1.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: df2f82ed-00ee-409c-924c-1ce3cb3c8f5c]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at pages.LoginPage.login(LoginPage.java:50)
-at tests.BookTest.bookTest(BookTest.java:14)
+              <![CDATA[org.openqa.selenium.NoAlertPresentException: No alert is present on the screen (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Medhat-PC', ip: '192.168.1.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: df2f82ed-00ee-409c-924c-1ce3cb3c8f5c
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
+at tests.BaseTest.setUp(BaseTest.java:54)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -44,11 +65,73 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bookTest()[pri:0, instance:tests.BookTest@3c947bc5]" name="bookTest" duration-ms="0" started-at="2019-11-25T20:09:39Z" finished-at="2019-11-25T20:09:39Z">
+          <exception class="org.openqa.selenium.NoAlertPresentException">
+            <message>
+              <![CDATA[No alert is present on the screen (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Medhat-PC', ip: '192.168.1.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: df2f82ed-00ee-409c-924c-1ce3cb3c8f5c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoAlertPresentException: No alert is present on the screen (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Medhat-PC', ip: '192.168.1.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: df2f82ed-00ee-409c-924c-1ce3cb3c8f5c
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
+at tests.BaseTest.setUp(BaseTest.java:54)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookTest -->
-        <test-method status="PASS" signature="stop()[pri:0, instance:tests.BookTest@32eebfca]" name="stop" is-config="true" duration-ms="2054" started-at="2019-11-21T18:12:02Z" finished-at="2019-11-21T18:12:04Z">
+        <test-method status="SKIP" signature="stop()[pri:0, instance:tests.BookTest@3c947bc5]" name="stop" is-config="true" duration-ms="0" started-at="2019-11-25T20:09:39Z" finished-at="2019-11-25T20:09:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stop -->
