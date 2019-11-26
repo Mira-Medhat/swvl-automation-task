@@ -2,6 +2,7 @@ package pages;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -49,13 +50,15 @@ public class BookPage {
 
 		pickupInput.click();
 		pickupInput.sendKeys(pickup);
-		placesresults = driver.findElements(By.xpath("//android.widget.TextView"));
+		//placesresults = driver.findElements(By.xpath("//android.widget.TextView"));
 
-		if (placesresults.size() != 0) {
-			placesresults.get(0).click();
-		}
+		//if (placesresults.size() != 0) {
+		//	placesresults.get(0).click();
+		//}
 
 		dropoffInput.sendKeys(dropoff);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		placesresults = driver.findElements(By.xpath("//android.widget.TextView"));
 		if (placesresults.size() != 0) {
 			placesresults.get(0).click();

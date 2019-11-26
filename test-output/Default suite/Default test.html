@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 26 09:40:36 EET 2019</td>
+<td>Started on:</td><td>Tue Nov 26 18:31:54 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>100 seconds (100288 ms)</td>
+<tr><td>Total time:</td><td>60 seconds (60390 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,38 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.BookTest.bookTest()'><b>bookTest</b><br>Test class: tests.BookTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: pickup_et
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: Cached elements &apos;By.id: flag_image_view&apos; do not exist in DOM anymore (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.96 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;Medhat-PC&apos;, ip: &apos;10.104.104.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+System info: host: &apos;Medhat-PC&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: 327d3c77-f325-4960-a834-22693ef625cc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:33)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:39)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:58)
 	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at pages.BookPage.selectPickupDropoff(BookPage.java:50)
-	at tests.BookTest.bookTest(BookTest.java:18)
+	at pages.LoginPage.login(LoginPage.java:54)
+	at tests.BookTest.bookTest(BookTest.java:14)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -111,17 +133,39 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1097324923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1097324923'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: pickup_et
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+</pre></div><a href='#' onClick='toggleBox("stack-trace3886839", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace3886839'><pre>org.openqa.selenium.StaleElementReferenceException: Cached elements &apos;By.id: flag_image_view&apos; do not exist in DOM anymore (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.96 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;Medhat-PC&apos;, ip: &apos;10.104.104.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+System info: host: &apos;Medhat-PC&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.swvl.customer, statBarHeight=54, viewportRect={top=54, left=0, width=1080, height=1962}, deviceName=VOFIU8JNMRSCLBKF, platform=LINUX, deviceUDID=VOFIU8JNMRSCLBKF, desired={app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, platformVersion=7.1.1, appWaitActivity=io.swvl.customer.*, autoGrantPermissions=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceName=OPPO F5}, platformVersion=7.1.1, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, udid=VOFIU8JNMRSCLBKF, platformName=Android, deviceApiLevel=25, deviceManufacturer=OPPO, app=C:\Users\Medhat\eclipse-workspace\swvl-automation-task\resources\Swvl-v5.3.1.apk, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, appWaitActivity=io.swvl.customer.*, databaseEnabled=false, pixelRatio=3, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=480, deviceModel=CPH1723}]
+Session ID: 327d3c77-f325-4960-a834-22693ef625cc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:33)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:39)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:58)
 	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at pages.BookPage.selectPickupDropoff(BookPage.java:50)
-	at tests.BookTest.bookTest(BookTest.java:18)
+	at pages.LoginPage.login(LoginPage.java:54)
+	at tests.BookTest.bookTest(BookTest.java:14)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -148,8 +192,8 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>29</td>
-<td>tests.BookTest@32eebfca</td></tr>
+<td>6</td>
+<td>tests.BookTest@3c947bc5</td></tr>
 </table><p>
 </body>
 </html>
