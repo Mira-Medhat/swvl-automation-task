@@ -17,8 +17,9 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class BookPage {
 
 	public AppiumDriver driver;
+
 	public BookPage(AppiumDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
 	}
@@ -37,11 +38,11 @@ public class BookPage {
 
 	@FindBy(id = "rides_recycler_view")
 	public MobileElement ridesResult;
-	
-	@FindBy (id = "next_btn")
+
+	@FindBy(id = "next_btn")
 	public MobileElement nextBtn;
-	
-	@FindBy (id = "book_btn")
+
+	@FindBy(id = "book_btn")
 	public MobileElement bookBtn;
 
 	public void selectPickupDropoff(String pickup, String dropoff) {
@@ -50,23 +51,27 @@ public class BookPage {
 
 		pickupInput.click();
 		pickupInput.sendKeys(pickup);
-		//placesresults = driver.findElements(By.xpath("//android.widget.TextView"));
+		placesresults = driver.findElements(By.xpath("//android.view.ViewGroup"));
 
-		//if (placesresults.size() != 0) {
-		//	placesresults.get(0).click();
-		//}
+		if (placesresults.size() != 0) {
+			placesresults.get(0).click();
+		}
 
 		dropoffInput.sendKeys(dropoff);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		placesresults = driver.findElements(By.xpath("//android.widget.TextView"));
+		placesresults = driver.findElements(By.xpath("//android.view.ViewGroup"));
+
 		if (placesresults.size() != 0) {
 			placesresults.get(0).click();
 		}
-		
-		((RemoteWebElement) driver.findElements
-		(By.xpath("//android.view.ViewGroup")).get(1)).click();
+
+		driver.findElement(
+				By.xpath("//androidx.recyclerview.widget.RecyclerView[@id='places_rv']/android.view.ViewGroup[1]"))
+				.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		nextBtn.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		bookBtn.click();
 	}
 

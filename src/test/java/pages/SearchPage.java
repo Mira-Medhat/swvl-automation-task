@@ -35,9 +35,9 @@ public class SearchPage {
 
 	public BookPage beginSearch() {
 
-		//if (driver.findElements(By.id("got_it_tv")).size() != 0) {
-			//}
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// if (driver.findElements(By.id("got_it_tv")).size() != 0) {
+		// }
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		gotItBtn.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

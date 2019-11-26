@@ -18,10 +18,10 @@ import io.appium.java_client.MobileBy.ByAccessibilityId;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import pages.AppointmentPage;
+import pages.TripDetailsPage;
 import pages.BookPage;
 import pages.LoginPage;
-import pages.MyTrips;
+import pages.MyTripsPage;
 import pages.SearchPage;
 import pages.SideMenuPage;
 import pages.TutorialPage;
@@ -34,8 +34,8 @@ public class BaseTest {
 	LoginPage loginPage;
 	BookPage bookPage;
 	SideMenuPage sideMenu;
-	MyTrips myTrip;
-	AppointmentPage appointment;
+	MyTripsPage myTrip;
+	TripDetailsPage appointment;
 
 	@BeforeClass
 	public void setUp() throws MalformedURLException {
@@ -49,14 +49,11 @@ public class BaseTest {
 		caps.setCapability("platformVersion", "7.1.1");
 		caps.setCapability("app", app.getAbsolutePath());
 		caps.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "io.swvl.customer.*");
-		// caps.setCapability("appPackage", "io.swvl.customer");
-		// caps.setCapability("appActivity",
-		// "io.swvl.customer.features.LaunchScreenActivity");
 		caps.setCapability("autoGrantPermissions", true);
+		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
-		//driver.findElementByAccessibilityId("ALLOW").click();
-
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.switchTo().alert().accept();
 
 		tutorialPage = new TutorialPage(driver);
@@ -64,8 +61,8 @@ public class BaseTest {
 		searchPage = new SearchPage(driver);
 		bookPage = new BookPage(driver);
 		sideMenu = new SideMenuPage(driver);
-		myTrip = new MyTrips(driver);
-		appointment = new AppointmentPage(driver);
+		myTrip = new MyTripsPage(driver);
+		appointment = new TripDetailsPage(driver);
 	}
 
 	@AfterClass

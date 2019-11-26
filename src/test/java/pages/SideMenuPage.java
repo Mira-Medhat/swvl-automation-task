@@ -10,7 +10,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class SideMenuPage {
-	
+
 	public AppiumDriver driver;
 
 	public SideMenuPage(AppiumDriver driver) {
@@ -20,18 +20,17 @@ public class SideMenuPage {
 
 	@FindBy(id = "menu_iv")
 	public MobileElement sideMenu;
-	
+
 	@FindBy(xpath = "//android.widget.CheckedTextView")
 	public MobileElement yourTrips;
-	
-	public MyTrips getBookingPage() {
-		
+
+	public MyTripsPage getBookingPage() {
+
 		sideMenu.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-yourTrips.click();
+		yourTrips.click();
 
-     return new MyTrips(driver);
+		return new MyTripsPage(driver);
 	}
-	
-}
 
+}

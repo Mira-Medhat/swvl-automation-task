@@ -12,36 +12,33 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TutorialPage {
-	
+
 	public AppiumDriver driver;
 	@FindBy(id = "skip_btn")
 	private MobileElement skipButton;
-	
+
 	public TutorialPage(AppiumDriver driver) {
 
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-
 	}
-	
-public boolean isTutorialShown() {
-    	
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    	if (driver.findElements(By.id("skip_btn")).size() != 0) {
-    		return true;
-    	}
-    	return false;
-    } 
+	public boolean isTutorialShown() {
 
-public LoginPage skipTutorial(){
-	if (isTutorialShown() == true)
-	{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	skipButton.click();
+
+		if (driver.findElements(By.id("skip_btn")).size() != 0) {
+			return true;
+		}
+		return false;
 	}
-	return new LoginPage(driver);
-}
-    
+
+	public LoginPage skipTutorial() {
+		if (isTutorialShown() == true) {
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			skipButton.click();
+		}
+		return new LoginPage(driver);
+	}
 
 }

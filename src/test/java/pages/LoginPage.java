@@ -45,7 +45,7 @@ public class LoginPage {
 	@FindBy(id = "password_edit_text")
 	public MobileElement passwordInput;
 
-	public SearchPage login(String mobileNumber, String password) {
+	public SearchPage login(String mobileNumber, String password) throws InterruptedException {
 
 		List<MobileElement> countrylist = new ArrayList<MobileElement>();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -61,8 +61,11 @@ public class LoginPage {
 
 		phoneInput.sendKeys(mobileNumber);
 		nextButton.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		passwordInput.sendKeys(password);
 		nextButton.click();
+
+		Thread.sleep(4000);
 
 		return new SearchPage(driver);
 	}

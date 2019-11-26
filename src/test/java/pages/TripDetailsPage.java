@@ -9,27 +9,23 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class AppointmentPage {
+public class TripDetailsPage {
 	public AppiumDriver driver;
 
-	public AppointmentPage(AppiumDriver driver) {
+	public TripDetailsPage(AppiumDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-
-	
-
-
-	@FindBy(id="cancel_booking_iv")
+	@FindBy(id = "cancel_booking_iv")
 	public MobileElement cancelBtn;
-	
-	@FindBy(id="confirm_btn")
+
+	@FindBy(id = "confirm_btn")
 	public MobileElement confirmCancel;
-	
+
 	public void cancelAppointment() {
 		cancelBtn.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-confirmCancel.click();
+		confirmCancel.click();
 	}
 }
