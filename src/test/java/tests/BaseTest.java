@@ -18,9 +18,12 @@ import io.appium.java_client.MobileBy.ByAccessibilityId;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import pages.AppointmentPage;
 import pages.BookPage;
 import pages.LoginPage;
+import pages.MyTrips;
 import pages.SearchPage;
+import pages.SideMenuPage;
 import pages.TutorialPage;
 
 public class BaseTest {
@@ -30,6 +33,9 @@ public class BaseTest {
 	SearchPage searchPage;
 	LoginPage loginPage;
 	BookPage bookPage;
+	SideMenuPage sideMenu;
+	MyTrips myTrip;
+	AppointmentPage appointment;
 
 	@BeforeClass
 	public void setUp() throws MalformedURLException {
@@ -57,6 +63,9 @@ public class BaseTest {
 		loginPage = new LoginPage(driver);
 		searchPage = new SearchPage(driver);
 		bookPage = new BookPage(driver);
+		sideMenu = new SideMenuPage(driver);
+		myTrip = new MyTrips(driver);
+		appointment = new AppointmentPage(driver);
 	}
 
 	@AfterClass
